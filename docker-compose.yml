@@ -1,0 +1,38 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: currency-exchange-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: exchange_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: currency-exchange-backend
+    depends_on:
+      - mysql
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/exchange_db?serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: password
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: nginx:latest
+    container_name: currency-exchange-frontend-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./CurrencyExchange.frontend.main:/usr/share/nginx/html
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
