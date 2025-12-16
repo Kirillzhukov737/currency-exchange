@@ -1,13 +1,12 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
-
-import src.main.java.org.example.dao.currency.CurrencyDAO;
-import src.main.java.org.example.dto.CurrencyCreateDTO;
-import src.main.java.org.example.dto.CurrencyDTO;
-import src.main.java.org.example.exception.ConflictException;
-import src.main.java.org.example.exception.NotFoundException;
-import src.main.java.org.example.mapper.CurrencyMapper;
-import src.main.java.org.example.model.Currency;
+import org.example.dao.currency.CurrencyDAO;
+import org.example.dto.CurrencyCreateDTO;
+import org.example.dto.CurrencyDTO;
+import org.example.exception.ConflictException;
+import org.example.exception.NotFoundException;
+import org.example.mapper.CurrencyMapper;
+import org.example.model.Currency;
 
 import java.util.ArrayList;
 import java.util.List;

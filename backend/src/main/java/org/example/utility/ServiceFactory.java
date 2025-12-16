@@ -1,9 +1,8 @@
-package src.main.java.org.example.utility;
+package org.example.utility;
 
-
-import src.main.java.org.example.dao.currency.CurrencyDAOImpl;
-import src.main.java.org.example.dao.exchange.ExchangeRateDAOImpl;
-import src.main.java.org.example.service.*;
+import org.example.dao.currency.CurrencyDAOImpl;
+import org.example.dao.exchange.ExchangeRateDAOImpl;
+import org.example.service.*;
 
 public final class ServiceFactory {
     private ServiceFactory() {

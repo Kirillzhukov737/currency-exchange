@@ -1,6 +1,6 @@
-package src.main.java.org.example.dao.currency;
+package org.example.dao.currency;
 
-import src.main.java.org.example.model.Currency;
+import org.example.model.Currency;
 
 import java.util.List;
 import java.util.Optional;

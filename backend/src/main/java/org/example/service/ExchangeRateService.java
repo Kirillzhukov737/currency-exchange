@@ -1,9 +1,8 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
-
-import src.main.java.org.example.dto.ExchangeRateCreateDTO;
-import src.main.java.org.example.dto.ExchangeRateDTO;
-import src.main.java.org.example.dto.ExchangeRateUpdateDTO;
+import org.example.dto.ExchangeRateCreateDTO;
+import org.example.dto.ExchangeRateDTO;
+import org.example.dto.ExchangeRateUpdateDTO;
 
 import java.util.List;
 

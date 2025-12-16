@@ -1,11 +1,10 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
-
-import src.main.java.org.example.dao.currency.CurrencyDAO;
-import src.main.java.org.example.dao.exchange.ExchangeRateDAO;
-import src.main.java.org.example.exception.NotFoundException;
-import src.main.java.org.example.model.Currency;
-import src.main.java.org.example.model.ExchangeRate;
+import org.example.dao.currency.CurrencyDAO;
+import org.example.dao.exchange.ExchangeRateDAO;
+import org.example.exception.NotFoundException;
+import org.example.model.Currency;
+import org.example.model.ExchangeRate;
 
 import java.math.BigDecimal;
 

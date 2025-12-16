@@ -1,17 +1,15 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
-
-
-import src.main.java.org.example.dao.currency.CurrencyDAO;
-import src.main.java.org.example.dao.exchange.ExchangeRateDAO;
-import src.main.java.org.example.dto.ExchangeRateCreateDTO;
-import src.main.java.org.example.dto.ExchangeRateDTO;
-import src.main.java.org.example.dto.ExchangeRateUpdateDTO;
-import src.main.java.org.example.exception.ConflictException;
-import src.main.java.org.example.exception.NotFoundException;
-import src.main.java.org.example.mapper.ExchangeRateMapper;
-import src.main.java.org.example.model.Currency;
-import src.main.java.org.example.model.ExchangeRate;
+import org.example.dao.currency.CurrencyDAO;
+import org.example.dao.exchange.ExchangeRateDAO;
+import org.example.dto.ExchangeRateCreateDTO;
+import org.example.dto.ExchangeRateDTO;
+import org.example.dto.ExchangeRateUpdateDTO;
+import org.example.exception.ConflictException;
+import org.example.exception.NotFoundException;
+import org.example.mapper.ExchangeRateMapper;
+import org.example.model.Currency;
+import org.example.model.ExchangeRate;
 
 import java.util.ArrayList;
 import java.util.List;

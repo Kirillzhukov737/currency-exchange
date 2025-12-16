@@ -1,8 +1,7 @@
-package src.main.java.org.example.dao.exchange;
+package org.example.dao.exchange;
 
-
-import src.main.java.org.example.model.ExchangeRate;
-import src.main.java.org.example.repository.DatabaseConnector;
+import org.example.model.ExchangeRate;
+import org.example.repository.DatabaseConnector;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,13 +1,12 @@
-package src.main.java.org.example.servlets;
+package org.example.servlets;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import src.main.java.org.example.service.CurrencyService;
-import src.main.java.org.example.service.ExchangeRateService;
-import src.main.java.org.example.service.ExchangeService;
-import src.main.java.org.example.utility.ServiceFactory;
-
+import org.example.service.CurrencyService;
+import org.example.service.ExchangeRateService;
+import org.example.service.ExchangeService;
+import org.example.utility.ServiceFactory;
 
 import java.io.IOException;
 

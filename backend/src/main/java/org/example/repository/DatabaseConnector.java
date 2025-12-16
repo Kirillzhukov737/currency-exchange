@@ -1,4 +1,4 @@
-package src.main.java.org.example.repository;
+package org.example.repository;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

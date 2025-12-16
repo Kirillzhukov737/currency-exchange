@@ -1,8 +1,8 @@
-package src.main.java.org.example.exception;
+package org.example.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletResponse;
-import src.main.java.org.example.dto.ErrorResponseDTO;
+import org.example.dto.ErrorResponseDTO;
 
 
 import java.io.IOException;

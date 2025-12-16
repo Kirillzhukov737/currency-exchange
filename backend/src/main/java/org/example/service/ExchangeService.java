@@ -1,4 +1,4 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
 import java.math.BigDecimal;
 

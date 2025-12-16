@@ -1,4 +1,4 @@
-package src.main.java.org.example.exception;
+package org.example.exception;
 
 public class NotFoundException extends ApiException{
 

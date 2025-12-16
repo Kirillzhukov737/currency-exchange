@@ -1,12 +1,11 @@
-package src.main.java.org.example.servlets;
+package org.example.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import src.main.java.org.example.dto.CurrencyDTO;
-import src.main.java.org.example.exception.GlobalExceptionHandler;
-
+import org.example.dto.CurrencyDTO;
+import org.example.exception.GlobalExceptionHandler;
 
 import java.io.IOException;
 

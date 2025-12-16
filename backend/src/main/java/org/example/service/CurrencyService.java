@@ -1,8 +1,7 @@
-package src.main.java.org.example.service;
+package org.example.service;
 
-
-import src.main.java.org.example.dto.CurrencyCreateDTO;
-import src.main.java.org.example.dto.CurrencyDTO;
+import org.example.dto.CurrencyCreateDTO;
+import org.example.dto.CurrencyDTO;
 
 import java.util.List;
 

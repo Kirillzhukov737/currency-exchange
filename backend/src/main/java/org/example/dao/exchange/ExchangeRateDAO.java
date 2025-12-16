@@ -1,7 +1,6 @@
-package src.main.java.org.example.dao.exchange;
+package org.example.dao.exchange;
 
-
-import src.main.java.org.example.model.ExchangeRate;
+import org.example.model.ExchangeRate;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,10 +1,9 @@
-package src.main.java.org.example.mapper;
+package org.example.mapper;
 
-
-import src.main.java.org.example.dto.CurrencyDTO;
-import src.main.java.org.example.dto.ExchangeRateDTO;
-import src.main.java.org.example.model.Currency;
-import src.main.java.org.example.model.ExchangeRate;
+import org.example.dto.CurrencyDTO;
+import org.example.dto.ExchangeRateDTO;
+import org.example.model.Currency;
+import org.example.model.ExchangeRate;
 
 public final class ExchangeRateMapper {
 

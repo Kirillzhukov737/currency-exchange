@@ -1,8 +1,7 @@
-package src.main.java.org.example.mapper;
+package org.example.mapper;
 
-
-import src.main.java.org.example.dto.CurrencyDTO;
-import src.main.java.org.example.model.Currency;
+import org.example.dto.CurrencyDTO;
+import org.example.model.Currency;
 
 public final class CurrencyMapper {
 
