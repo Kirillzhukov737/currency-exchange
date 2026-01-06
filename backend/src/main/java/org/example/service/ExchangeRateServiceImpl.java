@@ -1,7 +1,7 @@
 package org.example.service;
 
-import org.example.dao.currency.CurrencyDAO;
-import org.example.dao.exchange.ExchangeRateDAO;
+import org.example.dao.currency.CurrencyDao;
+import org.example.dao.exchange.ExchangeRateDao;
 import org.example.dto.ExchangeRateCreateDTO;
 import org.example.dto.ExchangeRateDTO;
 import org.example.dto.ExchangeRateUpdateDTO;
@@ -16,10 +16,10 @@ import java.util.List;
 
 public class ExchangeRateServiceImpl implements ExchangeRateService {
 
-    private final ExchangeRateDAO exchangeRateDAO;
-    private final CurrencyDAO currencyDAO;
+    private final ExchangeRateDao exchangeRateDAO;
+    private final CurrencyDao currencyDAO;
 
-    public ExchangeRateServiceImpl(ExchangeRateDAO exchangeRateDAO, CurrencyDAO currencyDAO) {
+    public ExchangeRateServiceImpl(ExchangeRateDao exchangeRateDAO, CurrencyDao currencyDAO) {
         this.exchangeRateDAO = exchangeRateDAO;
         this.currencyDAO = currencyDAO;
     }

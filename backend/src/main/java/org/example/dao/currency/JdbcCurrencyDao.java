@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class CurrencyDAOImpl implements CurrencyDAO {
+public class JdbcCurrencyDao implements CurrencyDao {
 
     private static final String FIND_ALL = """
             SELECT id, code, full_name, sign FROM currencies
@@ -24,7 +24,7 @@ public class CurrencyDAOImpl implements CurrencyDAO {
             """;
 
     private static final String FIND_BY_CODE = """
-            "SELECT id, code, full_name, sign
+            SELECT id, code, full_name, sign
             FROM currencies 
             WHERE code = ?
             """;

@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.dao.currency.CurrencyDAO;
+import org.example.dao.currency.CurrencyDao;
 import org.example.dto.CurrencyCreateDTO;
 import org.example.dto.CurrencyDTO;
 import org.example.exception.ConflictException;
@@ -13,9 +13,9 @@ import java.util.List;
 
 public class CurrencyServiceImpl implements CurrencyService {
 
-    private final CurrencyDAO currencyDAO;
+    private final CurrencyDao currencyDAO;
 
-    public CurrencyServiceImpl(CurrencyDAO currencyDAO) {
+    public CurrencyServiceImpl(CurrencyDao currencyDAO) {
         this.currencyDAO = currencyDAO;
     }
 

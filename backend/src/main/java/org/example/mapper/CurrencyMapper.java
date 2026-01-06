@@ -9,6 +9,6 @@ public final class CurrencyMapper {
     }
 
     public static CurrencyDTO toDto(Currency currency) {
-        return new CurrencyDTO(currency.code(), currency.fullName(), currency.sign());
+        return new CurrencyDTO(currency.id(), currency.fullName(), currency.code(), currency.sign());
     }
 }

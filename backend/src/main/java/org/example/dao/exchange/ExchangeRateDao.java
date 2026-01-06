@@ -5,7 +5,7 @@ import org.example.model.ExchangeRate;
 import java.util.List;
 import java.util.Optional;
 
-public interface ExchangeRateDAO {
+public interface ExchangeRateDao {
 
     ExchangeRate save(ExchangeRate exchangeRate);
 

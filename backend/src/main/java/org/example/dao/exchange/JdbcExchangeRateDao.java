@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ExchangeRateDAOImpl implements ExchangeRateDAO {
+public class JdbcExchangeRateDao implements ExchangeRateDao {
 
     private static final String INSERT = """
             INSERT INTO exchange_rates (base_currency_id, target_currency_id, rate) VALUES (?, ?, ?)

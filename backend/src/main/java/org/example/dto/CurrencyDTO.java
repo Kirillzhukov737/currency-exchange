@@ -1,4 +1,4 @@
 package org.example.dto;
 
-public record CurrencyDTO(String code, String name, String sign) {
+public record CurrencyDTO(int id, String name, String code, String sign) {
 }

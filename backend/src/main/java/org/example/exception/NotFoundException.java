@@ -1,8 +1,10 @@
 package org.example.exception;
 
-public class NotFoundException extends ApiException{
+import jakarta.servlet.http.HttpServletResponse;
+
+public final class NotFoundException extends ApiException {
 
     public NotFoundException(String message) {
-        super(message);
+        super(HttpServletResponse.SC_NOT_FOUND, message);
     }
 }

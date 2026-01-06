@@ -1,8 +1,15 @@
 package org.example.exception;
 
-public class ApiException extends RuntimeException{
+public abstract class ApiException extends RuntimeException{
 
-    public ApiException(String message){
+    private final int status;
+
+    protected ApiException(int status, String message){
         super(message);
+        this.status = status;
+    }
+
+    public int getStatus() {
+        return status;
     }
 }

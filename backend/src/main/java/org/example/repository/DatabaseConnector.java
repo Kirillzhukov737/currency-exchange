@@ -25,7 +25,7 @@ public class DatabaseConnector {
             }
             properties.load(inputStream);
         } catch (IOException e) {
-            throw new RuntimeException("Error database " + e);
+            throw new RuntimeException("Error database ", e);
         }
 
         HikariConfig hikariConfig = new HikariConfig();

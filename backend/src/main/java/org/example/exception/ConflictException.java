@@ -1,8 +1,10 @@
 package org.example.exception;
 
-public class ConflictException extends ApiException{
+import jakarta.servlet.http.HttpServletResponse;
+
+public final class ConflictException extends ApiException {
 
     public ConflictException(String message) {
-        super(message);
+        super(HttpServletResponse.SC_CONFLICT, message);
     }
 }
