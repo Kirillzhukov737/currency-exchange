@@ -59,12 +59,24 @@
     </dependencies>
 
     <build>
-        <plugins>
+        <finalName>currency_exchange_war_exploded</finalName>
 
+        <sourceDirectory>backend/src/main/java</sourceDirectory>
+
+        <resources>
+            <resource>
+                <directory>backend/src/main/resources</directory>
+            </resource>
+        </resources>
+
+        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -72,7 +84,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.3</version>
             </plugin>
-
         </plugins>
     </build>
 

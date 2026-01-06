@@ -9,18 +9,27 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+      - ./backend/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-ppassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
 
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: currency-exchange-backend
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     environment:
-      DB_URL: jdbc:mysql://mysql:3306/exchange_db?serverTimezone=UTC
+      DB_URL: jdbc:mysql://mysql:3306/exchange_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
       DB_USERNAME: root
       DB_PASSWORD: password
+      POOL_SIZE: "10"
+      POOL_TIMEOUT: "3000"
     ports:
       - "8080:8080"
 
@@ -30,7 +39,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./CurrencyExchange.frontend.main:/usr/share/nginx/html
+      - ./frontend:/usr/share/nginx/html:ro
     depends_on:
       - backend
 

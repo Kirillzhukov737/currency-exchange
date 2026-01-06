@@ -1,8 +1,7 @@
 FROM tomcat:10.1-jdk21-temurin
 
-RUN rm -rf /usr/local/tomcat/webapps/ROOT*
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY currency-exchange.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/currency_exchange_war_exploded.war /usr/local/tomcat/webapps/currency_exchange_war_exploded.war
 
 EXPOSE 8080
-

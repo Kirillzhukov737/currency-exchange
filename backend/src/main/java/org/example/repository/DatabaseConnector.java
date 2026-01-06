@@ -19,24 +19,33 @@ public class DatabaseConnector {
 
     static {
         Properties properties = new Properties();
-        try (InputStream inputStream = DatabaseConnector.class.getClassLoader().getResourceAsStream(PROPERTIES)) {
-            if (inputStream == null) {
-                throw new RuntimeException("Properties file " + PROPERTIES + " not found");
-            }
-            properties.load(inputStream);
+
+        try (InputStream in = DatabaseConnector.class.getClassLoader().getResourceAsStream(PROPERTIES)) {
+            if (in == null) throw new RuntimeException("Properties file " + PROPERTIES + " not found");
+            properties.load(in);
         } catch (IOException e) {
-            throw new RuntimeException("Error database ", e);
+            throw new RuntimeException("Error database", e);
         }
 
-        HikariConfig hikariConfig = new HikariConfig();
+        String url = pick(System.getenv("DB_URL"), properties.getProperty("db.url"));
+        String username = pick(System.getenv("DB_USERNAME"), properties.getProperty("db.username"));
+        String password = pick(System.getenv("DB_PASSWORD"), properties.getProperty("db.password"));
 
+        String poolSize = pick(System.getenv("POOL_SIZE"), properties.getProperty("pool.size"));
+        String poolTimeout = pick(System.getenv("POOL_TIMEOUT"), properties.getProperty("pool.timeout"));
+
+        HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName(properties.getProperty("db.driver"));
-        hikariConfig.setJdbcUrl(properties.getProperty("db.url"));
-        hikariConfig.setUsername(properties.getProperty("db.username"));
-        hikariConfig.setPassword(properties.getProperty("db.password"));
-        hikariConfig.setMaximumPoolSize(Integer.parseInt(properties.getProperty("pool.size")));
-        hikariConfig.setConnectionTimeout(Long.parseLong(properties.getProperty("pool.timeout")));
+        hikariConfig.setJdbcUrl(url);
+        hikariConfig.setUsername(username);
+        hikariConfig.setPassword(password);
+        hikariConfig.setMaximumPoolSize(Integer.parseInt(poolSize));
+        hikariConfig.setConnectionTimeout(Long.parseLong(poolTimeout));
 
         DATA_SOURCE = new HikariDataSource(hikariConfig);
+    }
+
+    private static String pick(String env, String prop) {
+        return (env != null && !env.isBlank()) ? env : prop;
     }
 }
